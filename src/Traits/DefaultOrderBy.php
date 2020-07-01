@@ -1,6 +1,6 @@
 <?php
 
-namespace Stephenjude\Traits;
+namespace Stephenjude\DefaultModelSorting\Traits;
 
 use Illuminate\Database\Eloquent\Builder;
 
