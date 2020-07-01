@@ -1,4 +1,4 @@
-# Defult Model Sorting
+# Default Model Sorting
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/stephenjude/default-model-sorting.svg?style=flat-square)](https://packagist.org/packages/stephenjude/default-model-sorting)
 [![Build Status](https://img.shields.io/travis/stephenjude/default-model-sorting/master.svg?style=flat-square)](https://travis-ci.org/stephenjude/default-model-sorting)
