@@ -1,9 +1,13 @@
 {
     "name": "stephenjude/default-model-sorting",
-    "description": "Add default ordering column and direction.",
+    "description": "Add default sorting column to your eloquent model",
     "keywords": [
         "stephenjude",
-        "default-model-sorting"
+        "default-model-sorting",
+        "sorting",
+        "eloquent",
+        "model",
+        "orderBy"
     ],
     "homepage": "https://github.com/stephenjude/default-model-sorting",
     "license": "MIT",
