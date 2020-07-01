@@ -1,10 +1,25 @@
-# Very short description of the package
+# Defult Model Sorting
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/stephenjude/default-model-sorting.svg?style=flat-square)](https://packagist.org/packages/stephenjude/default-model-sorting)
 [![Build Status](https://img.shields.io/travis/stephenjude/default-model-sorting/master.svg?style=flat-square)](https://travis-ci.org/stephenjude/default-model-sorting)
 [![Total Downloads](https://img.shields.io/packagist/dt/stephenjude/default-model-sorting.svg?style=flat-square)](https://packagist.org/packages/stephenjude/default-model-sorting)
 
-Add eloquent model default ordering column and direction
+Add default sorting column to your eloquent model.
+
+## Usage
+
+``` php
+use Stephenjude/Traits/DefaultOrderBy;
+
+class Article extends Model
+{
+    use DefaultOrderBy;
+
+    protected static $orderByColumn = 'title';
+
+    protected static $orderByColumnDirection = 'asc';
+}
+```
 
 ## Installation
 
@@ -14,10 +29,11 @@ You can install the package via composer:
 composer require stephenjude/default-model-sorting
 ```
 
-## Usage
+### Config
+You can publish the config file by running the `vendor:publish command`
 
-``` php
-add
+```
+php artisan vendor:publish --provider="Stephenjude\DefaultModelSorting\DefaultModelSortingServiceProvider" --tag="config"
 ```
 
 ### Testing
