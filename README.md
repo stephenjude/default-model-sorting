@@ -43,7 +43,7 @@ class Article extends Model
 }
 ```
 
-### Configuration
+## Configurations
 
 ### Publishing Config
 You can publish the config file by running the `vendor:publish command`
