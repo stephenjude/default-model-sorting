@@ -8,13 +8,13 @@ trait DefaultOrderBy
 {
     protected static function boot()
     {
+        parent::boot();
+
         $column = Self::$orderByColumn;
 
-        $direction = isset(Self::$orderByDirection)
-            ? Self::$orderByDirection
+        $direction = isset(Self::$orderByColumnDirection)
+            ? Self::$orderByColumnDirection
             : config('order_by');
-
-        parent::boot();
 
         static::addGlobalScope('order', function (Builder $builder) use ($column, $direction) {
             $builder->orderBy($column, $direction);
