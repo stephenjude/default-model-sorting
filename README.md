@@ -29,7 +29,7 @@ class Article extends Model
 ```
 
 ### Column Sorting Order
-You can change the default column order by add the `$orderByColumnDirection` property inside your eloquent model.
+You can change the default column sorting order by adding the `$orderByColumnDirection` property inside your eloquent model.
 ```php
 use Stephenjude/DefaultModelSorting/Traits/DefaultOrderBy;
 
