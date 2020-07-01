@@ -14,7 +14,7 @@ trait DefaultOrderBy
 
         $direction = isset(Self::$orderByColumnDirection)
             ? Self::$orderByColumnDirection
-            : config('order_by');
+            : config('default-model-sorting.order_by');
 
         static::addGlobalScope('order', function (Builder $builder) use ($column, $direction) {
             $builder->orderBy($column, $direction);
