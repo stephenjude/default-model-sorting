@@ -4,9 +4,7 @@ namespace Stephenjude\DefaultModelSorting;
 
 use Illuminate\Support\Facades\Facade;
 
-/**
- * @see \Stephenjude\DefaultModelSorting\Skeleton\SkeletonClass
- */
+
 class DefaultModelSortingFacade extends Facade
 {
     /**
