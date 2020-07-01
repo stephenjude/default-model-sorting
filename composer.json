@@ -1,0 +1,54 @@
+{
+    "name": "stephenjude/default-model-sorting",
+    "description": "Add default ordering column and direction.",
+    "keywords": [
+        "stephenjude",
+        "default-model-sorting"
+    ],
+    "homepage": "https://github.com/stephenjude/default-model-sorting",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Stephen Jude",
+            "email": "hello@stephenjude.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Stephenjude\\DefaultModelSorting\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Stephenjude\\DefaultModelSorting\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Stephenjude\\DefaultModelSorting\\DefaultModelSortingServiceProvider"
+            ],
+            "aliases": {
+                "DefaultModelSorting": "Stephenjude\\DefaultModelSorting\\DefaultModelSortingFacade"
+            }
+        }
+    }
+}
