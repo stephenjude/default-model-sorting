@@ -6,20 +6,6 @@
 
 Add default sorting column to your eloquent model.
 
-## Usage
-
-``` php
-use Stephenjude/Traits/DefaultOrderBy;
-
-class Article extends Model
-{
-    use DefaultOrderBy;
-
-    protected static $orderByColumn = 'title';
-
-    protected static $orderByColumnDirection = 'asc';
-}
-```
 
 ## Installation
 
@@ -29,11 +15,46 @@ You can install the package via composer:
 composer require stephenjude/default-model-sorting
 ```
 
-### Config
+## Basic Usage
+
+``` php
+use Stephenjude/DefaultModelSorting/Traits/DefaultOrderBy;
+
+class Article extends Model
+{
+    use DefaultOrderBy;
+
+    protected static $orderByColumn = 'title';
+}
+```
+
+### Column Sorting Order
+You can change the default column order by add the `$orderByColumnDirection` property inside your eloquent model.
+```php
+use Stephenjude/DefaultModelSorting/Traits/DefaultOrderBy;
+
+class Article extends Model
+{
+    use DefaultOrderBy;
+
+    protected static $orderByColumn = 'title';
+
+    protected static $orderByColumnDirection = 'desc';
+}
+```
+
+### Configuration
+
+### Publishing Config
 You can publish the config file by running the `vendor:publish command`
 
 ```
 php artisan vendor:publish --provider="Stephenjude\DefaultModelSorting\DefaultModelSortingServiceProvider" --tag="config"
+```
+### Configuring Default Column Sorting Order
+You can change the default sorting order inside the config file: 
+```
+'order_by' => 'asc',
 ```
 
 ### Testing
