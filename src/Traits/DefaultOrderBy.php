@@ -1,6 +1,6 @@
 <?php
 
-namespace stephenjude\Traits;
+namespace Stephenjude\Traits;
 
 use Illuminate\Database\Eloquent\Builder;
 
