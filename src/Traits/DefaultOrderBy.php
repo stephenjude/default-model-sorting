@@ -10,7 +10,9 @@ trait DefaultOrderBy
     {
         $column = Self::$orderByColumn;
 
-        $direction = Self::$orderByDirection ?: 'asc';
+        $direction = isset(Self::$orderByDirection)
+            ? Self::$orderByDirection
+            : config('order_by');
 
         parent::boot();
 
