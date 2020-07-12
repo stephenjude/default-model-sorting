@@ -16,7 +16,7 @@ trait DefaultOrderBy
             ? Self::$orderByColumnDirection
             : config('default-model-sorting.order_by');
 
-        static::addGlobalScope('order', function (Builder $builder) use ($column, $direction) {
+        static::addGlobalScope('default_order_by', function (Builder $builder) use ($column, $direction) {
             $builder->orderBy($column, $direction);
         });
     }
