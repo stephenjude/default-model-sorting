@@ -8,7 +8,9 @@ trait DefaultOrderBy
 {
     protected static function bootDefaultOrderBy()
     {
-        $column = Self::$orderByColumn;
+        if (empty(self::$orderByColumn)) {
+            return;
+        }
 
         $direction = isset(Self::$orderByColumnDirection)
             ? Self::$orderByColumnDirection
