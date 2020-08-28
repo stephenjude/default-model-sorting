@@ -6,10 +6,8 @@ use Illuminate\Database\Eloquent\Builder;
 
 trait DefaultOrderBy
 {
-    protected static function boot()
+    protected static function bootDefaultOrderBy()
     {
-        parent::boot();
-
         $column = Self::$orderByColumn;
 
         $direction = isset(Self::$orderByColumnDirection)
