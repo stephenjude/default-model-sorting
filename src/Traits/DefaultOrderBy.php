@@ -6,14 +6,16 @@ use Illuminate\Database\Eloquent\Builder;
 
 trait DefaultOrderBy
 {
-    protected static function boot()
+    protected static function bootDefaultOrderBy()
     {
-        parent::boot();
+        if (empty(self::$orderByColumn)) {
+            return;
+        }
 
-        $column = Self::$orderByColumn;
+        $column = self::$orderByColumn;
 
-        $direction = isset(Self::$orderByColumnDirection)
-            ? Self::$orderByColumnDirection
+        $direction = isset(self::$orderByColumnDirection)
+            ? self::$orderByColumnDirection
             : config('default-model-sorting.order_by');
 
         static::addGlobalScope('default_order_by', function (Builder $builder) use ($column, $direction) {

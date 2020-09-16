@@ -1,7 +1,9 @@
 # Changelog
 
-All notable changes to `default-model-sorting` will be documented in this file
+## 1.0.0 - 2020-07-01
 
-## 1.0.0 - 201X-XX-XX
+- Initial release
 
-- initial release
+## 1.0.1 - 2020-07-12
+
+- Update global scope name
