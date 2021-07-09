@@ -18,7 +18,7 @@ composer require stephenjude/default-model-sorting
 ## Basic Usage
 
 ``` php
-use Stephenjude/DefaultModelSorting/Traits/DefaultOrderBy;
+use Stephenjude\DefaultModelSorting\Traits\DefaultOrderBy;
 
 class Article extends Model
 {
@@ -31,7 +31,7 @@ class Article extends Model
 ### Column Sorting Order
 You can change the default column sorting order by adding the `$orderByColumnDirection` property inside your eloquent model.
 ```php
-use Stephenjude/DefaultModelSorting/Traits/DefaultOrderBy;
+use Stephenjude\DefaultModelSorting\Traits\DefaultOrderBy;
 
 class Article extends Model
 {
