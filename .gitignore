@@ -1,1 +1,5 @@
 /.editorconfig
+vendor
+composer.lock
+.phpunit.result.cache
+report.junit.xml
